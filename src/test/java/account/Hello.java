@@ -14,7 +14,9 @@ public class Hello {
 		System.setProperty("webdriver.gecko.driver","E://geckodriver.exe");
 		d=new FirefoxDriver();
 		d.get("https://accounts.google.com/SignUp?hl=en");
-		System.out.println("The Title of the Web Page:"+d.getTitle());
+		String s =d.getTitle();
+		System.out.println("The Title of the Web Page:"+s);
+		System.out.println("Committed the application");
 		d.findElement(By.id("FirstName")).sendKeys("Sakhi");
 		d.close();
 	}
